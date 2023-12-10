@@ -12,6 +12,7 @@ import {
 import { Button } from "@/components/ui/button";
 
 import { cn } from "@/lib/utils";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export type Organization = {
   id: string;
@@ -102,5 +103,16 @@ export const NavItem = ({
         ))}
       </AccordionContent>
     </AccordionItem>
+  );
+};
+
+NavItem.Skeleton = function SkeletonNavItem() {
+  return (
+    <div className="flex items-center gap-x-2">
+      <div className="w-10 h-10 relative shrink-0">
+        <Skeleton className="w-full h-full absolute" />
+      </div>
+      <Skeleton className="h-10 w-full" />
+    </div>
   );
 };
