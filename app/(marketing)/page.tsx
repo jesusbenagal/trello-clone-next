@@ -15,7 +15,7 @@ const textFont = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
-export const MarketingPage = () => {
+const MarketingPage = () => {
   return (
     <div className="flex items-center justify-center flex-col">
       <div
